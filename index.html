@@ -1,0 +1,707 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<title>AntillesMenuiserie</title>
+</head>
+
+<body>
+	<!--Menu-->
+
+	<nav class="bb-navbar navbar navbar-dark position-fixed w-100 navbar-expand-lg">
+		
+		<div class="container-fluid">
+
+			<a class="navbar-brand Merriweather fw-bolder mx-4 py-3" href="#">Antilles Menuiserie</a>
+			
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item pe-5">
+						<a class="nav-link active" aria-current="page" href="#">Accueil</a>
+					</li>
+					<li class="nav-item pe-5 dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Nos activités
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#activites">Interieur</a></li>
+							<li><a class="dropdown-item" href="#activites">Exterieur</a></li>
+						</ul>
+					</li>
+					<li class="nav-item pe-5 dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Nos réalisations
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#realisations">Agrandir ma maison</a></li>
+							<li><a class="dropdown-item" href="#realisations">Rénover ma maison</a></li>
+							<li><a class="dropdown-item" href="#realisations">Aménager ma maison</a></li>
+						</ul>
+					</li>
+					<li class="nav-item pe-5">
+						<button type="button" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Mon compte</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--Modal Connexion-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header fw-bolder">
+					<h2 class="modal-title fs-5 Merriweather" id="exampleModalLabel">Acceder à mon compte</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3">
+						<div class="col-md-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+								<input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Identifiant">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
+								<input type="password" class="form-control" placeholder="Mot de passe*" id="inputPassword4">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="gridCheck">
+								<label class="form-check-label" for="gridCheck">
+									Se souvenir de moi
+								</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<a class="nav-link active savoir" aria-current="page" href="#" data-bs-toggle="modal"
+								data-bs-target="#exampleModal3">Mot de passe oublié</a>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-order me-5 rounded-0 Merriweather"
+						data-bs-dismiss="modal">S'identifier</button>
+					<button type="button" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-toggle="modal"
+						data-bs-target="#exampleModal2">Creer un compte</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Modal Creation de compte-->
+	<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5 Merriweather" id="exampleModalLabel">Créer mon compte</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!--				<form class="row g-3 needs-validation" novalidate>
+							<div class="col-md-6">
+								<input type="text" class="form-control" id="validationCustom01" placeholder="Nom" required>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control" id="validationCustom02" placeholder="Prenom" required>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label for="validationCustomUsername" class="form-label">Username</label>
+								<div class="input-group has-validation">
+									<span class="input-group-text" id="inputGroupPrepend">@</span>
+									<input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+									<div class="invalid-feedback">
+										Please choose a username.
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="validationCustom03" class="form-label">City</label>
+								<input type="text" class="form-control" id="validationCustom03" required>
+								<div class="invalid-feedback">
+									Please provide a valid city.
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label for="validationCustom04" class="form-label">State</label>
+								<select class="form-select" id="validationCustom04" required>
+									<option selected disabled value="">Choose...</option>
+									<option>...</option>
+								</select>
+								<div class="invalid-feedback">
+									Please select a valid state.
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label for="validationCustom05" class="form-label">Zip</label>
+								<input type="text" class="form-control" id="validationCustom05" required>
+								<div class="invalid-feedback">
+									Please provide a valid zip.
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+									<label class="form-check-label" for="invalidCheck">
+										Agree to terms and conditions
+									</label>
+									<div class="invalid-feedback">
+										You must agree before submitting.
+									</div>
+								</div>
+							</div>
+						</form> -->
+					<form class="row g-3">
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Nom*" required>
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Prénom*" required>
+						</div>
+						<div class="col-md-6">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-at"></i></div>
+								<input type="email" class="form-control" placeholder="Email*" id="inputEmail" required>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
+								<input type="password" class="form-control" placeholder="Mot de passe*" id="inputMdp" required>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-location-dot"></i></div>
+								<input type="text" class="form-control" placeholder="Adresse*" id="inputAdresse" required>
+							</div>
+						</div>
+						<div class="col-12">
+							<input type="text" class="form-control" placeholder="Adresse complémentaire" id="inputAdresse2">
+						</div>
+						<div class="col-md-4">
+							<input type="text" class="form-control" placeholder="C.P*" id="inputCP" required>
+						</div>
+						<div class="col-md-8">
+							<input type="text" class="form-control" placeholder="Ville*" id="inputVille" required>
+						</div>
+						<div class="col-md-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-globe"></i></div>
+								<input type="text" class="form-control" placeholder="Pays*" id="inputPays" required>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<input type="text" class="form-control" placeholder="Question secrète*" id="questionSecrete" required>
+						</div>
+						<div class="col-md-12">
+							<input type="text" class="form-control" placeholder="Reponse secrète*" id="reponseSecrete" required>
+						</div>
+						<div class="col-md-4">
+							<select id="inputState" class="form-select">
+								<option selected>Choisir</option>
+								<option>...</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<p class="text-light">(*)Tous les champs sont requis</p>
+						</div>
+						<div class="col-12">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+								<label class="form-check-label text-light" for="invalidCheck">
+									Accepter les termes et conditions
+								</label>
+								<div class="invalid-feedback">
+									Vous devez accepter les termes et conditions
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-toggle="modal"
+						data-bs-target="#exampleModal">Se connecter</button>
+					<button type="button" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-toggle="modal"
+						data-bs-target="#exampleModal2">Creer un compte</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Modal Recuperation de compte-->
+	<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title fs-5 Merriweather" id="exampleModalLabel">Récuperer mon compte</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3">
+						<div class="col-md-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+								<input type="text" class="form-control" placeholder="Identifiant*" aria-label="Last name">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="input-group">
+								<div class="input-group-text"><i class="fa-solid fa-at"></i></div>
+								<input type="email" class="form-control" placeholder="Email*" id="inputEmail4">
+							</div>
+						</div>
+						<div class="col-12">
+							<input type="text" class="form-control" placeholder="question secrète*" aria-label="Last name">
+						</div>
+						<div class="col-md-12">
+							<input type="text" class="form-control" placeholder="Réponse secrète*" aria-label="Last name">
+						</div>
+						<div class="col-12">
+							<p class="text-light">(*)Tous les champs sont requis</p>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-dismiss="modal">Recevoir un
+						code provisoire</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Modal Appel-->
+	<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header fw-bolder">
+					<h2 class="modal-title fs-5 Merriweather" id="exampleModalLabel">Un numéro pour vous joindre</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3">
+						<div class="col-md-12">
+							<input type="text" class="form-control" placeholder="Nom*" required>
+						</div>
+						<div class="col-md-12">
+							<input type="text" class="form-control" placeholder="Téléphone*" required>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-order me-5 rounded-0 Merriweather"
+						data-bs-dismiss="modal">Valider</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Section Banniere-->
+	<section class="banner d-flex justify-content-center align-items-center pt-5">
+		<div class="container my-5 py-5">
+			<div class="row">
+				<div class="col-md-6"><img src="assets/images/logom-removebg-preview.png" class="d-block w-100" alt="..." />
+				</div>
+				<div class="col-md-6 banner-desc">
+					<h1 class="py-4 Redressed">Antilles Menuiserie vous accueille <br> et vous accompagne à chaque étape de votre
+						projet.</h1>
+					<p>
+						<button class="btn btn-order me-5 rounded-0 Merriweather"><a class="nav-link active" aria-current="page"
+								href="#joindre">Nous contacter</a></button>
+						<button type="button" class="btn btn-order me-5 rounded-0 Merriweather" data-bs-toggle="modal"
+							data-bs-target="#exampleModal4">Etre appelé</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Section Card-->
+	<section class="bloc Merriweather py-5">
+		<div class="container">
+			<div class="row">
+				<div class="card mb-3 border-0 rounded-0">
+					<div class="row">
+						<div class="col-md-6">
+							<img src="assets/images/600/5.jpg" class="img-fluid " alt="img1">
+						</div>
+						<div class="col-md-6">
+							<div class="card-body ">
+								<h5 class="card-title fw-bolder" id="activites">Titre1</h5>
+								<p class="card-text">Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..</p>
+								<p class="card-text"><a href="#" class="btn plus fw-bolder">en savoir plus</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 border-0 rounded-0">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card-body">
+								<h5 class="card-title fw-bolder">Titre2</h5>
+								<p class="card-text">Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..</p>
+								<p class="card-text "><a href="#" class="btn plus fw-bolder">en savoir plus</a></p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div id="carouselExampleIndicators" class="carousel slide">
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+										aria-current="true" aria-label="Slide 1"></button>
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+										aria-label="Slide 2"></button>
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+										aria-label="Slide 3"></button>
+								</div>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="assets/images/600/4.jpg" class="d-block w-100" alt="...">
+									</div>
+									<div class="carousel-item">
+										<img src="assets/images/600/2.jpg" class="d-block w-100" alt="...">
+									</div>
+									<div class="carousel-item">
+										<img src="assets/images/600/3.jpg" class="d-block w-100" alt="...">
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+									data-bs-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+									data-bs-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 border-0 rounded-0">
+					<div class="row">
+						<div class="col-md-6">
+							<img src="assets/images/600/1.jpg" class="img-fluid" alt="...">
+						</div>
+						<div class="col-md-6">
+							<div class="card-body">
+								<h5 class="card-title fw-bolder">Titre3</h5>
+								<p class="card-text apparition">Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..
+								</p>
+								<p class="card-text mb-0"><a href="#" class="btn plus fw-bolder">en savoir plus</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Section Nos réalisations-->
+	<section class="cc-menu Merriweather py-2">
+		<div class="container">
+			<div class="row mt-5">
+				<h3 class="text-center text-light merriweather" id="realisations">Nos realisations</h3>
+				<div class="card bg-transparent border-0 text-center mb-2">
+					<div class="card-body text-light">
+						<h3 class="card-title besoin">Besoin de création originale ?</h3><br>
+						<h5 class="card-text">Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..</h5><br>
+					</div>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/1200A/4.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Surfaces vitrées</h5>
+							<p class="card-text">
+								Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="assets/images/1200A/3.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Cuisine</h5>
+							<p class="card-text">
+								Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-sm-none d-md-block">
+					<div class="card">
+						<img src="assets/images/1200A/1.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Chambre</h5>
+							<p class="card-text">
+								Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-sm-none d-md-block">
+					<div class="card">
+						<img src="assets/images/1200A/2.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Aménagement</h5>
+							<p class="card-text">
+								Contactez-nous dès à présent et choisissez votre menuiserie sur-mesure..
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Section Tendances du moment-->
+	<section class="cc-carousel Merriweather text-light text-center py-2">
+		<div class="container">
+			<div class="row mt-5">
+				<h1 class="text-capitalize Redressed mb-5">Les tendances du moment</h1>
+			</div>
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="assets/images/1200A/5.jpg" class="d-block w-100" alt="..." />
+						<div class="carousel-caption carousel-title d-none d-md-block">
+							<p>Nous pouvons intervenir aussi bien en neuf qu’en rénovation
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/images/1200A/6.jpg" class="d-block w-100" alt="..." />
+						<div class="carousel-caption carousel-title d-none d-md-block">
+							<p>Vous pouvez compter sur nous pour accorder les menuiseries à l’architecture de votre bâtiment</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/images/1200A/7.jpg" class="d-block w-100" alt="..." />
+						<div class="carousel-caption carousel-title d-none d-md-block">
+							<p>Nous vous conseillons dans le choix du modèle, des matériaux, des couleurs, de la forme et des
+								dimensions</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/images/1200A/8.jpg" class="d-block w-100" alt="..." />
+						<div class="carousel-caption carousel-title d-none d-md-block">
+							<p>Nous pouvons également intervenir pour les demandes spécifiques. D’ailleurs, nous pouvons concevoir des
+								ouvrages sur mesure</p>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!--Section Renovation-->
+	<section class="bloc Merriweather py-5">
+		<div class="container">
+			<h2 class="question Redressed text-center text-dark mb-4">Optez pour des travaux de rénovation énergétique</h2>
+			<div class="row mt-5">
+				<div class="card mb-3 border-0 rounded-0 forme">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card-body info">
+								<h5 class="card-title">Se protéger de la hausse des prix</h5>
+								<p class="card-text">À l’heure où les prix des matières premières et de l’électricité fluctuent
+									considérablement, la rénovation énergétique se présente comme la solution incontournable pour réduire
+									leur impact sur votre budget.
+									<br>En effet, en optimisant les performances énergétiques de votre logement, vous diminuez
+									significativement votre dépendance à l’apport en énergie et les répercussions des hausses des prix sur
+									votre portefeuille...
+								</p>
+								<p class="card-text"><a href="#" class="savoir">en savoir plus</a></p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-body info">
+								<h5 class="card-title">Réduire les dépenses du foyer</h5>
+								<p class="card-text">La rénovation énergétique vous permet de diminuer la consommation en énergie de
+									votre logement et, par conséquent, de réduire vos dépenses.
+									<br>Quels que soient les travaux effectués dans votre logement (optimisation de l’isolation,
+									installation de système de chauffage écologique, etc.), ils auront un impact bénéfique sur votre
+									facture en électricité...
+								</p>
+								<p class="card-text"><a href="#" class="savoir">en savoir plus</a></p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-body info">
+								<h5 class="card-title">Améliorer son confort de vie</h5>
+								<p class="card-text">L’optimisation des performances énergétiques de votre logement ne vous permet pas
+									essentiellement de vous engager dans une démarche écologique et de réduire vos dépenses. Elle
+									contribue également à l’amélioration du confort de votre maison.
+									<br>Grâce à une excellente isolation thermique et un dispositif de chauffage performant, vous pouvez
+									optimiser grandement le confort thermique de votre habitation, aussi bien en été qu’en hiver...
+								</p>
+								<p class="card-text"><a href="#" class="savoir">en savoir plus</a></p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-body info">
+								<h5 class="card-title">Préserver la planète</h5>
+								<p class="card-text">Aujourd’hui et plus que jamais, nous devons mettre toutes les solutions en œuvre
+									pour rendre nos logements moins polluants et moins énergivores, afin de préserver notre planète qui,
+									jusqu’à preuve du contraire, est la seule à fournir tous les éléments nécessaires à la vie.
+									<br>Selon des études, le secteur du BTP génère annuellement près de 123 millions de tonnes de CO2.
+									Pour protéger notre environnement et garantir notre avenir, nous devons donc nous mobiliser pour
+									réduire ces émissions polluantes et cela doit passer par la rénovation énergétique de nos
+									habitations....
+								</p>
+								<p class="card-text"><a href="#" class="savoir">en savoir plus</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Section contact-->
+	<section class="order-form py-5">
+		<div class="container">
+			<h2 class="Redressed text-center text-light mb-4" id="joindre">Votre projet</h2>
+			<form>
+				<div class="row">
+					<div class="col-md-6 col-sm">
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<input type="text" class="form-control" placeholder="Votre nom complet" />
+						</div>
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="inputGroupSelect01"><i class="fab fa-accusoft"></i></label>
+							<select class="form-select" id="inputGroupSelect01">
+								<option class="text-muted">Votre projet</option>
+								<option value="1">Interieur</option>
+								<option value="2">Exterieur</option>
+								<option value="3">Interieur et extérieur</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="inputGroupSelect01"><i
+									class="fas fa-sort-numeric-up-alt"></i></label>
+							<select class="form-select" id="inputGroupSelect01">
+								<option class="text-muted">Surface</option>
+								<option value="1">Moins de 100m²</option>
+								<option value="2">Entre 100m² et 150m²</option>
+								<option value="3">Entre 150m² et 200m²</option>
+								<option value="3">Plus de 200m²</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm">
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="fas fa-at"></i></span>
+							<input type="email" class="form-control" placeholder="Votre adresse email" />
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="fas fa-phone"></i></span>
+							<input type="number" class="form-control" placeholder="Numéro de téléphone" />
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="fas fa-home"></i></span>
+							<select class="form-select" id="inputGroupSelect01">
+								<option class="text-muted">Votre secteur</option>
+								<option value="1">Centre</option>
+								<option value="2">Nord</option>
+								<option value="3">Sud</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-group mb-3">
+						<span class="input-group-text">Autres informations</span>
+						<textarea class="form-control" aria-label="With textarea"></textarea>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-order me-5 rounded-0 Merriweather">Soumettre</button>
+			</form>
+		</div>
+	</section>
+
+	<!--Section footer-->
+	<section class="bb-footer py-5">
+		<div align="center" class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4 col-sm">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30891.087940322916!2d-60.985776!3d14.577067999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa04256ea010d%3A0xc495d074176ef14a!2sABD%20FERMETURES%20Martinique!5e0!3m2!1sfr!2sus!4v1684593588971!5m2!1sfr!2sus"
+						width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 col-sm">
+					<h6 class="redressed fs-3">Notre adresse</h6>
+					<p class="card-text text-light">ZI Champigny 97224 DUCOS (à côté de Crousty’s)
+						<br> Standard : 0596 00 00 01
+						<br> Mobile : 0696 00 00 01
+						<br> Email : commercial@antilles.menuiserie.com
+					</p>
+
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 col-sm">
+					<h6 class="redressed fs-3">Liens utiles</h6>
+					<nav class="nav flex-column">
+						<a class="nav-link py-1 merriweather fs-6 link-footer" href="#">Nos garanties</a>
+						<a class="nav-link py-1 merriweather fs-6 link-footer" href="#">Conditions générales</a>
+						<a class="nav-link py-1 merriweather fs-6 link-footer" href="#">Mentions légales</a>
+					</nav>
+				</div>
+				<div class="col-12 text-center text-light py-4 fw-bolder Merriweather">
+					&copy; Antilles Menuiserie
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					Copyright
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Bouton Top-->
+	<div id="scrollUp">
+		<a href="#top"><img src="assets/images/top.png" /></a>
+	</div>
+
+
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery-3.6.4.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
